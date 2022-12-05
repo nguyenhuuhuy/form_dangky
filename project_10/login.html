@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/project_10/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <div class="error-email" style="display: none;">Error</div>
+        <label for="password">Password</label>
+        <input type="text" id="password">
+        <div class="error-password" style="display: none;">Error</div>
+
+        <div class="error-confirmPassword" style="display: none;">Error</div>
+        <button onclick="login()">Login</button> <!-- Tạo sự kiện click-->
+        <p>bạn chưa có tài khoản rồi <span id="redirectLogin" onclick="getRegister()"
+                style="color: red;">register</span></p>
+    </div>
+</body>
+<script src="/project_10/js/login.js"></script>
+
+</html>
