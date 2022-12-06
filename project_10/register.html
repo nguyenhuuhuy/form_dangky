@@ -16,16 +16,18 @@
     <div class="container">
         <label for="email">Email</label>
         <input type="text" id="email">
-        <div class="error-email" id="errorEmail" style="display: none;">Error</div>
+        <div class="error-email" id="errorEmail" style="display: none; color: red;">Error</div>
         <label for="password">Password</label>
         <i class="fa-solid fa-eye-slash" onclick="showPass()" id="showPass"></i>
         <input type="password" id="password">
-        <div class="error-password" style="display: none;">Error</div>
+        <div class="error-password" id="errorPassword" style="display: none; color: red;">Error</div>
         <label for="">confirmPassword</label>
         <input type="password" id="confirmpassword"> <br>
-        <div class="error-confirmPassword" style="display: none;">Error</div>
-        <button onclick="register()">Register</button> <!-- Tạo sự kiện click-->
-        <p>bạn đã có tài khoản rồi <span id="redirectRegister" onclick="getLogin()" style="color: red;">login</span></p>
+        <i class="fa-solid fa-eye-slash" onclick="showPass1()" id="showPass1"></i>
+        <div class="error-confirmPassword" id="errorConfirmPassword" style="display: none; color: red;">Error</div>
+        <br> <button id="Register">Register</button> <!-- Tạo sự kiện click-->
+        <p style="display: none;" id="click_login">bạn đã có tài khoản rồi <span id="redirectRegister"
+                onclick="getLogin()" style="color: red;">login</span></p>
     </div>
 </body>
 <script src="/project_10/js/register.js"></script>
