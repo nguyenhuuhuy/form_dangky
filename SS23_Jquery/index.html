@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p class="demo_1">alo 1</p>
+    <p id="demo">alo 2</p>
+    <p class="demo_1">alo 3</p>
+    <button>click</button>
+    <input type="text" name="" id="" />
+  </body>
+
+  <script>
+    // $(document).ready(function () {
+    //   $("button").click(function () {
+    //     $("#demo").hide();
+    //   });
+    // });
+
+    // chọn phần tử đầu tiên
+    // $(document).ready(function () {
+    //   $("button").click(function () {
+    //     $("p:first").hide();
+    //   });
+    // });
+
+    // chọn các phần tử trong class demo_1
+    // $(document).ready(function () {
+    //   $("button").click(function () {
+    //     $(".demo_1").hide();
+    //   });
+    // });
+
+    // khi click vào thẻ p thì chính nó sẽ ẩn đi
+    // $(document).ready(function () {
+    //   $("p").click(function () {
+    //     $(this).hide();
+    //   });
+    // });
+
+    // khi dblclick sẽ mất đi
+    // $(document).ready(function () {
+    //   $("p").dblclick(function () {
+    //     $(this).hide();
+    //   });
+    // });
+
+    // khi di chuyển qua phần tử có id là demo
+    // $(document).ready(function () {
+    //   $("#demo").mouseenter(function () {
+    //     console.log("bạn đã đưa con trỏ vào alo 2");
+    //   });
+    // });
+
+    // $(document).ready(function () {
+    //   $("#demo").mouseleave(function () {
+    //     console.log("bạn đã rời khỏi alo 2");
+    //   });
+    // });
+
+    // $(document).ready(function () {
+    //   $("#demo").mousedown(function () {
+    //     console.log("ok");
+    //   });
+    // });
+
+    // $(document).ready(function () {
+    //   $("#demo").mouseup(function () {
+    //     console.log("ok");
+    //   });
+    // });
+
+    // $(document).ready(function () {
+    //   $("#demo").hover(
+    //     function () {
+    //       console.log("Bạn đã di chuyển vào p1!");
+    //     },
+    //     function () {
+    //       console.log("Tạm biệt! Bạn vừa rời khỏi p1!");
+    //     }
+    //   );
+    // });
+
+    // $(document).ready(function () {
+    //   $("input").focus(function () {
+    //     $(this).css("background-color", "blue");
+    //   });
+    // });
+
+    // $(document).ready(function () {
+    //   $("input").blur(function () {
+    //     $(this).css("background-color", "red");
+    //   });
+    // });
+
+    // gán sự kiện onclick cho thẻ p
+    $(document).ready(function () {
+      $("p").on("click", function () {
+        $(this).hide();
+      });
+    });
+
+    // $(document).ready(function () {
+    //   $("p").on({
+    //     mouseenter: function () {
+    //       $(this).css("background-color", "lightgray");
+    //     },
+    //     mouseleave: function () {
+    //       $(this).css("background-color", "lightblue");
+    //     },
+    //     click: function () {
+    //       $(this).css("background-color", "red");
+    //     },
+    //   });
+    // });
+  </script>
+</html>

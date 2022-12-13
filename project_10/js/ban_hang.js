@@ -1,58 +1,65 @@
 // let listProduct = [
 //     {
-//       name: "táo",
+//       name: "Áo loại 1",
 //       prince: "30k",
 //       image: "./image/ao_3.jpg",
 //       id: 1 ,
 //     },
 //     {
-//       name: "táo",
+//       name: "Áo loại 2",
 //       prince: "30k",
 //       image: "./image/ao_4.jpg",
 //       id: 2 ,
 //     },
 //     {
-//       name: "táo",
+//       name: "Áo loại 3",
 //       prince: "30k",
 //       image: "./image/ao_5.jpg",
 //       id: 3,
 //     },
 //     {
-//       name: "táo",
+//       name: "Áo loại 4",
 //       prince: "30k",
 //       image: "./image/ao_6.jpg",
 //       id: 4 ,
 //     },
 //     {
-//       name: "táo",
+//       name: "Áo loại 5",
+//       prince: "30k",
+//       image: "./image/ao_7.jpg",
+//       id: 5 ,
+//     },
+//     {
+//       name: "Áo loại 6",
 //       prince: "30k",
 //       image: "./image/ao_7.jpg",
 //       id: 5 ,
 //     }
+    
 // ]
 // localStorage.setItem ("listProduct", JSON.stringify(listProduct));
-
-function gethtml() {
+// let listProduct = JSON.parse(localStorage.getItem("listProduct"));
+function gethtml(addListProduct) {
   let data = "";
 
-  let listProduct = JSON.parse(localStorage.getItem("listProduct"));
+  // let listProduct = JSON.parse(localStorage.getItem("listProduct"));
 
-  for (let i = 0; i < listProduct.length; i++) {
+  for (let i = 0; i < addListProduct.length; i++) {
     data += `
         <div class="product">
-            <img src="${listProduct[i].image}" alt="" width="200px">
-            <p>${listProduct[i].name}</p>
-            <label for="prince">${listProduct[i].prince}</label> <br>
+            <img src="${addListProduct[i].image}" alt="" width="200px">
+            <p>${addListProduct[i].name}</p>
+            <label for="prince">${addListProduct[i].prince}</label> <br>
             <div>
                 <input type="number" value="1">
-                <i class="fa-solid fa-cart-shopping" onclick="add(${listProduct[i].id})" ></i>
+                <i class="fa-solid fa-cart-shopping" onclick="add(${addListProduct[i].id})" ></i>
             </div>
         </div>
         `;
   }
   document.getElementById("push_mang").innerHTML = data;
 }
-gethtml();
+gethtml(listProduct);
 
 // kiểm tra id
 function add(id) {
@@ -93,4 +100,33 @@ function add(id) {
       }
     }
   }
+}
+
+/* 
+// function search() {
+//   let sea = document.getElementById("add");
+// console.log(sea.value);
+// }
+
+
+// let sea = document.getElementById("add");
+// sea.addEventListener("input", ()=>{
+//   console.log(sea.value);
+// });
+*/
+
+
+function check() {
+  let list = [];
+  let valueInput = document.getElementById("search").value.toUpperCase();
+  // console.log(valueInput);
+  for (let i = 0; i < listProduct.length; i++) {
+    // console.log(listProduct[i].name);
+    if (listProduct[i].name.toUpperCase().indexOf(valueInput) != -1) {
+      list.push(listProduct[i])
+    }
+    
+  }
+  // console.log(list);
+  gethtml(list);
 }
